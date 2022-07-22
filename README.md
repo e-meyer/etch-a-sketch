@@ -1,1 +1,2 @@
-# etch-a-sketch
+# :paintbrush: Etch-A-Sketch
+
