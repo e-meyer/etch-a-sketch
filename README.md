@@ -1,1 +1,0 @@
-# :paintbrush: Etch-A-Sketch
