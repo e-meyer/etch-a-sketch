@@ -62,7 +62,11 @@ body {
 
 .grid {
     display: flex;
-    
+    max-width: 500px;
+}
+
+.grid-square {
+    display: flex;
 }
 
 /*
