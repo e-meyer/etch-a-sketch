@@ -1,24 +1,14 @@
-// Box width
-let bw = 500;
-// Box height
-let bh = 500;
-// Padding
-let p = 0;
+let grid = document.querySelector('.grid')
 
-let canvas = document.getElementById("canvas");
-let context = canvas.getContext("2d");
-function drawBoard(){
-    for (let x = 0; x <= bw; x += 16) {
-        context.moveTo(0.5 + x + p, p);
-        context.lineTo(0.5 + x + p, bh + p);
+let gridMaker = () => {
+    for(let i=0;i<16;i++){
+        for(let j=0;j<16;j++){
+            let newDiv = document.createElement('div')
+            newDiv.style.padding = '16px'
+            newDiv.classList.add('grid-square')
+            grid.appendChild(newDiv)
+        }
     }
-
-    for (let x = 0; x <= bh; x += 16) {
-        context.moveTo(p, 0.5 + x + p);
-        context.lineTo(bw + p, 0.5 + x + p);
-    }
-    context.strokeStyle = "#575757";
-    context.stroke();
 }
 
-drawBoard();
+gridMaker();

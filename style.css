@@ -33,7 +33,7 @@ body {
     background-color: #264A70;
     color: #96B8EE;
     padding: 15px 40px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .header a {
@@ -60,11 +60,9 @@ body {
 
 */
 
-.content {
+.grid {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
+    
 }
 
 /*
