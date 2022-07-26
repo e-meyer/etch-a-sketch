@@ -11,16 +11,14 @@ let grid = document.querySelector('.grid')
 
 let gridMaker = () => {
     for(let i=0;i<16;i++){
-        let newDiv1 = document.createElement('div')
-        let newDiv = document.createElement('div')
         for(let j=0;j<16;j++){
+            let newDiv = document.createElement('div')
             newDiv.style.border = '1px solid #d9d9d9'
             newDiv.style.padding = '20px'
             newDiv.style.background = '#252525'
             newDiv.classList.add('grid-square')
+            grid.appendChild(newDiv)
         }
-        newDiv1.appendChild(newDiv)
-        grid.appendChild(newDiv1)
     }
     
     
