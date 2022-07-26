@@ -62,11 +62,8 @@ body {
 
 .grid {
     display: flex;
-    max-width: 500px;
-}
-
-.grid-square {
-    display: flex;
+    justify-content: center;
+    
 }
 
 /*
@@ -80,7 +77,6 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    margin-top: auto;
     color: #D9D9D9;
     font-size: 28px;
     font-weight: bold;
