@@ -19,7 +19,7 @@ gridMaker();
 let squares = Array.from(document.getElementsByClassName('grid-square'))
 
 squares.forEach((button) => {
-    button.addEventListener('click', () => {
+    button.addEventListener('mousemove', () => {
         
         if(toolSelected[0].classList.contains('selected')) button.style.background = '#d9d9d9'  // if brush tool is selected
         else button.style.background = '#252525'                                                // if eraser is selected
