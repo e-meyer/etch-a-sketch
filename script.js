@@ -1,19 +1,14 @@
 let grid = document.querySelector('.grid')
+let toolSelected = Array.from(document.querySelectorAll('.brush-tool, .eraser'))
 
-/*
-    >> FUNCTION START
-        >> LOOP 16 TIMES TO MAKE A ROW
-        >> BREAK LINE
-        >> REPEAT UNTIL THERE'S 16 ROWS
-
-
-*/
+console.log(toolSelected[0].className)
+console.log(toolSelected[1].className)
 
 let gridMaker = () => {
     for(let i=0;i<16;i++){
         for(let j=0;j<16;j++){
             let newDiv = document.createElement('div')
-            newDiv.style.border = '1px solid #d9d9d9'
+            newDiv.style.border = '1px solid #565656'
             newDiv.style.padding = '20px'
             newDiv.style.background = '#252525'
             newDiv.classList.add('grid-square')
@@ -30,12 +25,23 @@ let squares = Array.from(document.getElementsByClassName('grid-square'))
 
 squares.forEach((button) => {
     button.addEventListener('click', () => {
-        button.style.background = '#d9d9d9'
+        
+        if(toolSelected[0].classList.contains('selected')) button.style.background = '#d9d9d9'
+        else button.style.background = '#252525'
     })
 })
 
-squares.forEach((button) => {
-    button.addEventListener('mousemove', () => {
-        button.style.background = '#d9d9d9'
+toolSelected.forEach((tool) => {
+    tool.addEventListener('click', () => {
+        if(tool.classList.contains('selected')) return;
+
+        if(tool.classList.contains('brush-tool')){
+            toolSelected[1].classList.remove('selected')
+            tool.classList.add('selected')
+        } else {
+            toolSelected[0].classList.remove('selected')
+            tool.classList.add('selected')
+        }
+        
     })
 })
