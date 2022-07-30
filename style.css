@@ -62,14 +62,19 @@ body {
 
 .content {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    filter: drop-shadow(0px 6px 4px rgba(0,4,0,0.5));
+    gap: 10%;
 }
 
 .preferences {
     padding: 30px 80px;
     background-color: #252525;
     border-radius: 10px;
+    color: #fff;
+    
+    
 }
 
 .grid {
@@ -78,6 +83,7 @@ body {
     max-width: 672px;
     flex-wrap: wrap;
 }
+
 
 /*
 
