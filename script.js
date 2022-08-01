@@ -20,7 +20,7 @@ function gridMaker() {
 
     for(let i = 0; i < (sliderValue * sliderValue); i++){
         let gridSquare = document.createElement('div')
-        if(sliderValue <= 48) gridSquare.style.border = '1px solid #565656';
+        if(sliderValue <= 48) gridSquare.style.border = '1px solid #fafafa';
         gridSquare.addEventListener('mouseover', changeColor)
         gridSquare.addEventListener('mousedown', changeColor)
         gridSquare.classList.add('grid-square')
@@ -55,7 +55,7 @@ toolSelected.forEach((tool) => {
 function changeColor(e) {
     if (e.type === 'mouseover' && !mouseDown) return
     else if (toolSelected[0].classList.contains('selected')) e.target.style.background = colorValue
-    else e.target.style.background = '#252525'
+    else e.target.style.background = 'none'
 }
 
 function clearGrid() {
