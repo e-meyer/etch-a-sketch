@@ -21,6 +21,7 @@ function gridMaker() {
     for(let i = 0; i < (sliderValue * sliderValue); i++){
         let gridSquare = document.createElement('div')
         if(sliderValue <= 48) gridSquare.style.border = '1px solid #9d9d9d';
+        else grid.style.border = '1px solid #9d9d9d'
         gridSquare.addEventListener('mouseover', changeColor)
         gridSquare.addEventListener('mousedown', changeColor)
         gridSquare.classList.add('grid-square')
