@@ -1,6 +1,8 @@
 ﻿
 # :paintbrush: Etch A Sketch
 
+![Image of the page](https://github.com/e-meyer/etch-a-sketch/blob/main/images/final-layout.png)
+
 A repository to show my solution for the [Etch-A-Sketch](https://www.theodinproject.com/lessons/foundations-etch-a-sketch) project from [TheOdinProject](https://theodinproject.com). There's only the landing page, where the main component is the grid where you can draw whatever you want.
 
 ## :scroll: Walkthrough
