@@ -35,27 +35,27 @@ colorPicker.onchange = () => colorValue = document.querySelector('.color-picker'
 sliderGrid.onchange = () => gridMaker()
 clearButton.onclick = () => gridMaker()
 
-toolSelected.forEach((tool) => {
-    tool.addEventListener('click', () => {
-        if(tool.classList.contains('selected')) return;
+toolSelected.forEach((newSelectedTool) => {
+    newSelectedTool.addEventListener('click', () => {
+        if(newSelectedTool.classList.contains('selected')) return;
 
-        if(tool.classList.contains('brush-tool')){
-            toolSelected[1].classList.remove('selected')
-            toolSelected[1].style.background = '#414141'
-        } else {
-            toolSelected[0].classList.remove('selected')
-            toolSelected[0].style.background = '#414141'
-        }
+        let previousSelectedTool = document.querySelector('.selected')
+        previousSelectedTool.classList.remove('selected')
         
-        tool.classList.add('selected')
-        tool.style.background = '#202020'
+        newSelectedTool.classList.add('selected')
 
     })
 })
 
+function returnsToolSelected() {
+    let toolSelected = document.querySelector('.selected')
+    if(toolSelected.classList.contains('brush-tool')) return 'brush-tool'
+    else return 'eraser'
+}
+
 function changeColor(e) {
     if (e.type === 'mouseover' && !mouseDown) return
-    else if (toolSelected[0].classList.contains('selected')) e.target.style.background = colorValue
+    else if (returnsToolSelected() == 'brush-tool') e.target.style.background = colorValue
     else e.target.style.background = 'none'
 }
 

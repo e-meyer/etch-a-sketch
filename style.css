@@ -63,6 +63,10 @@ body {
     background-color: #9DC3ED;
 }
 
+.header .selected {
+    background-color: #202020;
+}
+
 /*
 
     CONTENT
