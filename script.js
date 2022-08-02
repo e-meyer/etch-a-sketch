@@ -40,14 +40,14 @@ toolSelected.forEach((tool) => {
 
         if(tool.classList.contains('brush-tool')){
             toolSelected[1].classList.remove('selected')
-            toolSelected[1].style.background = '#264a70'
+            toolSelected[1].style.background = '#414141'
         } else {
             toolSelected[0].classList.remove('selected')
-            toolSelected[0].style.background = '#264a70'
+            toolSelected[0].style.background = '#414141'
         }
         
         tool.classList.add('selected')
-        tool.style.background = '#9DC3ED'
+        tool.style.background = '#202020'
 
     })
 })
